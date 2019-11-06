@@ -9,22 +9,12 @@ using System.Security.Cryptography.X509Certificates;
 using Tensorflow;
 using Tensorflow.Estimators;
 using static Tensorflow.Binding;
-
+using static ZeroNet.UtilFuncs;
 
 namespace ZeroNet
 {
     class ProgramTF
     {
-
-        public static double[] OH(int n)
-        {
-            var res = new double[10];
-            for (int i = 0; i < 10; i++)
-            {
-                res[i] = Math.Abs(i - n) < 0.1 ? 1.0 : 0.0;
-            }
-            return res;
-        }
 
         public static void MainFunc(string[] args)
         {

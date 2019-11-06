@@ -18,31 +18,13 @@ using System.Security.Cryptography.X509Certificates;
 using Tensorflow;
 using Tensorflow.Estimators;
 using static Tensorflow.Binding;
-
+using static ZeroNet.UtilFuncs;
 
 namespace ZeroNet
 {
 
     class NetByHand
     {
-        static double Mult(double[] a, double[] b)
-        {
-            return a.Zip(b).Select(x => x.First * x.Second).Sum();
-        }
-
-        static double[] Sub(double[] a, double[] b)
-        {
-            return a.Zip(b).Select(x => x.First - x.Second).ToArray();
-        }
-        static double[] Add(double[] a, double[] b)
-        {
-            return a.Zip(b).Select(x => x.First + x.Second).ToArray();
-        }
-
-        static double[] Mult(double x, double[] a)
-        {
-            return a.Select(z => z * x).ToArray();
-        }
 
         public static void MainFunc(string[] args)
         {

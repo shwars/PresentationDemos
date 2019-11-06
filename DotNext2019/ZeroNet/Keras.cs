@@ -3,6 +3,7 @@ using Keras.Models;
 using Keras.Optimizers;
 using Keras.Utils;
 using Python.Runtime;
+using static ZeroNet.UtilFuncs;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Transforms;
@@ -24,18 +25,7 @@ namespace ZeroNet
 {
 
     public class PKeras
-    {
-
-        public static double[] flatten(double[][] a)
-        {
-            var L = new List<double>();
-            foreach(var x in a)
-            {
-                L.AddRange(x);
-            }
-            return L.ToArray();
-        }
- 
+    { 
         public static void MainFunc(string[] args)
         {
             Console.WriteLine("Execution begins...");
